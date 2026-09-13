@@ -23,6 +23,7 @@ public class SecurityConfig {
 
         http
                 .csrf(csrf -> csrf.disable()) // 禁用 CSRF（REST API 不需要）
+                .cors(cors -> {})
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // 使用无状态
                                                                                                               // Session（JWT
                                                                                                               // 必须）
